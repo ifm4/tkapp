@@ -154,7 +154,7 @@ class App:
             return MSG_ADMIN["AlreadyExists"]()
         self.load_users()
 
-    def upd_user(self):
+    def update_user(self):
         username = self.username.get().strip()
         password = self.password.get()
         selected = self.tree.selection()
@@ -218,7 +218,7 @@ class App:
 
         box = pack(ttk.Frame(self.root), padx=12, pady=12)
         pack(ttk.Button(box, text="Добавить", command=self.add_user), side="left")
-        pack(ttk.Button(box, text="Изменить", command=self.upd_user), side="left")
+        pack(ttk.Button(box, text="Изменить", command=self.update_user), side="left")
         pack(ttk.Button(box, text="Разблокировать", command=self.unlock_user), side="left")
         pack(ttk.Button(box, text="Заблокировать", command=self.lock_user), side="left")
 
